@@ -1,0 +1,152 @@
+.info-section {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .text-card-1 {
+    order: 1;
+  }
+  
+  .img-card-1 {
+    order: 2;
+  }
+  
+  .text-card-2 {
+    order: 4;
+  }
+  
+  .img-card-2 {
+    order: 3;
+  }
+  
+  .text-card {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    padding: 0 100px;
+    gap: 40px;
+  }
+  
+  .info-card-title {
+    font-family: "Fraunces", serif;
+    font-weight: 900;
+    font-size: 36px;
+  }
+  
+  .info-card-paragraph {
+    font-family: "Barlow", sans-serif;
+    color: $Very-dark-grayish-blue;
+  }
+  
+  .info-card-btn {
+    font-family: "Fraunces", serif;
+    width: 30%;
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0;
+    text-align: left;
+    position: relative;
+    z-index: 200;
+  
+    &::after {
+      content: "";
+      position: absolute;
+      height: 5px;
+      width: 90%;
+      background-color: $Yellow;
+      top: 90%;
+      left: 0;
+      z-index: -15;
+      display: none;
+      border-radius: 5px;
+    }
+  }
+  
+  .info-card-btn:hover:after {
+    display: block;
+  }
+  
+  .img-card {
+    width: 50%;
+  }
+  
+  .info-card-btn-2 {
+    &::after {
+      background-color: $Soft-Red;
+    }
+  }
+
+  .text-card-graphic-design {
+    width: 50%;
+    background-image: url(/images/desktop/image-graphic-design.jpg);
+    background-size: cover;
+  }
+  
+  @media all and (max-width: 900px) {
+    .text-card {
+      gap: 10px;
+      padding: 0 10px;
+    }
+  
+    .info-card-title {
+      font-size: 26px;
+    }
+  
+    .info-card-paragraph {
+      font-size: 16px;
+    }
+  
+    .info-card-btn {
+      font-size: 18px;
+    }
+  }
+  
+  @media all and (max-width: 740px) {
+    .info-section {
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
+  
+    .text-card {
+      width: 100%;
+      align-items: center;
+      padding: 50px 20px;
+      gap: 50px;
+    }
+  
+    .info-card-title,
+    .info-card-paragraph,
+    .info-card-btn {
+      text-align: center;
+    }
+
+    .text-card-1 {
+        order: 2;
+      }
+      
+      .img-card-1 {
+        order: 1;
+      }
+      
+      .text-card-2 {
+        order: 4;
+      }
+      
+      .img-card-2 {
+        order: 3;
+      }
+  
+    .info-card-btn {
+      &::after {
+        width: 100%;
+      }
+    }
+  
+    .img-card {
+      width: 100%;
+    }
+  }

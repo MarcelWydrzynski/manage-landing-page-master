@@ -1,0 +1,70 @@
+.opinions-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 150px 0;
+}
+
+.opinions-title {
+    font-family: 'Fraunces', serif; 
+    letter-spacing: 3px;
+    color: $Grayish-blue;
+}
+
+.opinnions-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.opinion-card {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.opinion-card img {
+    border-radius: 50%;
+}
+
+.opinion-card-paragraph {
+    font-family: 'Barlow', sans-serif;
+    color: $Very-dark-grayish-blue;
+    text-align: center;
+}
+
+.opinion-card-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    
+    h3 {
+        font-family: 'Fraunces', serif;
+        font-weight: 900;
+    }
+
+    span {
+        color: $Grayish-blue;
+    }
+    
+}
+
+@media all and (max-width: 740px) {
+
+    .opinnions-card-container {
+        flex-direction: column;
+    }
+
+    .opinion-card {
+        width: 100%;
+        padding: 0 100px;
+      
+    }
+}
