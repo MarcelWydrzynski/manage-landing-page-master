@@ -1,0 +1,17 @@
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+
+   img {
+    width: 25%;
+   }
+}
+
+@media all and (max-width: 740px) {
+    
+    .gallery-container {
+        img {
+            width: 50%;
+        }
+    }
+  }
